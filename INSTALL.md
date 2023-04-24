@@ -11,6 +11,24 @@ Next, clone this repository by opening a terminal and typing the following comma
 
 If you do not want to install git, you can instead download [main.zip](https://github.com/ageron/handson-ml3/archive/main.zip), unzip it, rename the resulting directory to `handson-ml3` and move it to your development directory.
 
+## Azure ml studio links
+
+If you want to run the notebooks in Azure ml studio, you can use the following links to understand how you configure the environment.
+
+- https://learn.microsoft.com/en-us/azure/machine-learning/tutorial-cloud-workstation?view=azureml-api-2
+
+> the original conda environment generates error in Azure Compute instance, so I created another one that is reduced and it is called **reduced_env.yml**.
+
+After you created a compute instance, open a prompt and then run the following sequence of commands
+
+```bash
+conda env create -f reduced_env.yml
+conda activate homl3
+python -m ipykernel install --user --name homl3 --display-name "HOML3"
+```
+
+Once you have the kernel you can use in your notebook and run the code in azure ML instance.
+
 ## Install Anaconda
 Next, you will need Python 3 and a bunch of Python libraries. The simplest way to install these is to [download and install Anaconda](https://www.anaconda.com/distribution/), which is a great cross-platform Python distribution for scientific computing. It comes bundled with many scientific libraries, including NumPy, Pandas, Matplotlib, Scikit-Learn and much more, so it's quite a large installation. If you prefer a lighter weight Anaconda distribution, you can [install Miniconda](https://docs.conda.io/en/latest/miniconda.html), which contains the bare minimum to run the `conda` packaging tool. You should install the latest version of Anaconda (or Miniconda) available.
 
